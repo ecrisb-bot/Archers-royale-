@@ -1,0 +1,33 @@
+using System;
+
+namespace ClashRoyale.Core
+{
+    public static class Config
+    {
+        // ==========================================
+        // CONFIGURAÇÕES DO SERVIDOR ARCHERS ROYALE
+        // VERSÃO CLÁSSICA DE 2016 (42 CARTAS)
+        // ==========================================
+
+        // Informações da Versão de Rede (Trava o APK em 2016)
+        public const string ServerVersion = "1.1.0"; 
+        public const int ProtocolVersion = 1;
+        public const int ClientVersion = 1;
+
+        // Progressão Vanilla Pura (Sem Ouro Infinito)
+        // Damos 5 moedas apenas para o jogador conseguir pagar a taxa da primeira batalha
+        public const int DefaultGold = 5; 
+        public const int DefaultGems = 0; 
+        public const int DefaultTrophies = 0;
+        public const int DefaultLevel = 1;
+
+        // Limitação Histórica do Jogo de 2016
+        public const bool EnableLendarias = false; // Desativa cartas Lendárias (Princesa/Mago de Gelo vieram depois)
+        public const int MaxCardsInGame = 42;       // Limita a leitura da base de dados para as 42 originais
+        public const bool FreeBatalha = false;      // Mantém o custo clássico de ouro por batalha se o APK exigir
+
+        // Configurações Globais de Comunicação (Rede)
+        public const string ServerIP = "0.0.0.0";   // Permite conexões locais e externas
+        public const int ServerPort = 9339;         // Porta padrão dos servidores da Supercell
+    }
+}
